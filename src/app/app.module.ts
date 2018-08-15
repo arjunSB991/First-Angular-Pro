@@ -8,12 +8,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { LifeGoalsComponent } from './life-goals/life-goals.component';
+import { ProImagesGalleryComponent } from './pro-images-gallery/pro-images-gallery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    LifeGoalsComponent,
+    ProImagesGalleryComponent
   ],
   imports: [
     BrowserModule,

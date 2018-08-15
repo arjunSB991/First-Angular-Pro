@@ -1,25 +1,65 @@
-<div class="container color-dark">
-  <div class="col">
-    <p>Add a bucket list item</p>
-  </div>
-  <div class="col">
-    <p>Your bucket list ({{itemCount}})</p>
-  </div>
+<div>
+  <p class="project_title"><a routerLink="pro_images_gallery">Online Shopping Project</a></p>
+  <hr>
+  <ul class="project_obj">
+    <li>The main and the first objectives of this project are to fulfil the customer’s needs on time.</li>
+    <li>Selling Laptops and other computer peripherals online.</li>
+    <li>Due to the easy and secure accessing of site, multiple user access simultaneously.</li>
+    <li>Providing secure online credit card transactions.</li>
+    <li>Ease of product search depending on the brand, configuration and budget rang of user.</li>
+    <li>Making laptops available to users at cheapest prices through SALE and refurbished goods.</li>
+    <li>User can order the product available at the company online.</li>
+    <li>Preparation of reports like bill & shipment takes less time. The application consists of real time tracking system. By real time tracking system the customer can check the status of his/her order.</li>
+    <li>Once the order bill is executed. It sent to him/her.</li>
+    <li>A customer becomes a client of company, at the sole concern of the company.</li>
+    <li>Company has to send the market status of various its products to customer. This will also help in appraisal of various customers.</li>
+    <li>Save time to search.</li>
+    <li>Administrator can also change the Banner and also can change the list of special offer products.</li>
+  </ul>
 </div>
-<div class="container color-light" [@goals]="goals.length">
-  <div class="col">
-    <p class="sm">Use this form below to add a new bucket list goal. What do you want to do with your life.</p>
-
-    <form>
-      <input type="text" class="txt" name="item" placeholder="Lige Goal...." [(ngModel)]="goalText">
-      <!-- <br><span>{{ goalText }}</span> -->
-      <input type="submit" class="btn" value="{{ btnText }}" (click)="addItems()">
-      <!-- <input type="submit" class="btn" [value]="btnText"> -->
-    </form>
-  </div>
-  <div class="col">
-    <p class="life-container" *ngFor="let goal of goals; let i=index" (click)="removeItems(i)">
-      {{ goal }}
-    </p>
-  </div>
+<div>
+  <p class="project_title">Cargo Management System</p>
+  <hr>
+  <ul class="project_obj">
+    <li>This proposed Cargo Management System (E-CMS) will provide the customers to book their Cargo or items from a source location to destination location to/from any part of the world.</li>
+    <li>This software will maintain the records of the registered users who have sent their Cargos in the part as history and also maintains the customers whose Cargos are under process.</li>
+    <li>It will facilitate Online booking facility i.e. a customer can book a Cargo & wake payment online. Then after a representative will be seat to the customer’s site & track the Cargo for delivery.</li>
+    <li>The Customers can check the status of their Cargo status i.e. whether the Cargo has been delivered to destinations or not.</li>
+    <li>The software will also provide complaint facilities. It means a customer can make complaint also if anything wrong happens to his/her cargo.</li>
+    <li>This software will provide the cargo transfer facility through various means of transport i.e. by train or airways or ship.</li>
+    <li><strong>Secure</strong> &rarr; As this software has online payment services which are performed through various Web services of various banks. Hence it is secured.</li>
+    <li><strong>Reliable</strong> &rarr; Reliable data is evidence you can trust. Reliable is conforming to fact and therefore worthy of belief and it is also worthy of trust.</li>
+    <li><strong>Accurate</strong> &rarr; An accurate measurement is one that gives the correct value on the average, i.e. there is no bias.</li>
+  </ul>
+</div>
+<div>
+  <p class="project_title">Online Appointment System</p>
+  <hr>
+  <ul class="project_obj">
+    <li>This proposed Online Appointment System (OAS) will provide the patient to register with their complete details of illness.</li>
+    <li>After confirmation of registration by doctors, patients can book the appointment.</li>
+    <li>This software will maintain all the records of the registered patients who have booked the appointment of the doctor. And also maintain the patients’ whose registrations are under process.</li>
+    <li>It will facilitate Online appointment facility i.e. a patient can registered & make online payment before discharge.</li>
+    <li>The patients can check their physical examination’s status as well as their other medical reports.</li>
+    <li>The software will also provide complaint facilities. It means that patient can complaint against not receives neither confirmation nor rejection detail from doctor.</li>
+    <li><strong>Secure</strong> &rarr; As this software has online payment services which are performed through various WCF services of various banks. Hence it is completely secured.</li>
+    <li><strong>Reliable</strong> &rarr; Reliable data is evidence you can trust. Reliable is conforming to fact and therefore worthy of belief and it is also worthy of trust.</li>
+  </ul>
+</div>
+<div>
+  <p class="project_title">Tour & Travel System</p>
+  <hr>
+  <ul class="project_obj">
+    <li>This Online Tour & Travel Management System will provide a complete solution of user’s needs regarding Holiday Packages, Hotel Information, Tourist Places and Destination and Bus, Train, Airways Reservation etc.</li>
+    <li>This software will maintain all the records and information of the registered user and also maintains information of all the Tour & Travel Spots like: - Hotel, Historical Monuments, and other Tourist Places.</li>
+    <li>It will facilitate Online Tour & Travel facility i.e. a user can registered, make online payment, cancel and book trip etc.</li>
+    <li>It will provide Trains Schedules, Source Stations, Destination Stations, One way trip and tow way trip charges etc.</li>
+    <li>It will provide Bus Schedules, Source Stations, Destination Stations, Available seats, Booked seats, fare etc.</li>
+    <li>It will provide Cabs Detail such as Charges of Micro Cab, Mini Cab, Number of seats available etc.</li>
+    <li>It will provide Flight Schedules, Source and Destination Stations, One way and Two way trip charges and Available seats in Economy, Business class etc.</li>
+    <li>It will provide Hotels Details, Rates, Available Rooms, Location, way of reach like bus, cab, train or flight, Packages etc.</li>
+    <li>The user can make complaint or give feedback regarding our services.</li>
+    <li><strong>Secure</strong> &rarr; As this software has online payment services which are performed through various WCF services of various banks. Hence it is completely secured.</li>
+    <li><strong>Reliable</strong> &rarr; Reliable data is evidence you can trust. Reliable is conforming to fact and therefore worthy of belief and it is also worthy of trust.</li>
+  </ul>
 </div>
