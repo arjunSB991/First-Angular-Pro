@@ -25,7 +25,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/OnlineShoppingProject"
+              "src/assets/OnlineShoppingSystem",
+              "src/assets/CargoManagementSystem"
             ],
             "styles": [
               "src/styles.scss"

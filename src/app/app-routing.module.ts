@@ -19,7 +19,7 @@ const routes: Routes = [
     component: LifeGoalsComponent
   },
   {
-    path: 'pro_images_gallery',
+    path: 'pro_images_gallery/:name',
     component: ProImagesGalleryComponent
   }
 ];
