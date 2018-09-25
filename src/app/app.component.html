@@ -1,9 +1,26 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<ul>
-  <li><a routerLink="">Home</a></li>
-  <li><a routerLink="about/48">About</a></li>
-  <li><a routerLink="life_goals">Life Goals</a></li>
-</ul>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- <a class="navbar-brand" routerLink="">Menu</a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav" style="margin:0;">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="about/48">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="life_goals">Life Goals</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="bootstrap_practices">Bootstrap</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
 
 <!-- <app-home></app-home> -->
 
@@ -25,5 +42,6 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul> -->
-
+<div style="margin-top:10px;">
 <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,104 @@
+<div class="container">  
+  <div class="col-md-12"> 
+    <h4>Time: Years:{{tYears}} Months:{{tMonths}} Days:{{tDays}} Hours:{{tHours}} Minutes:{{tMinutes}} Seconds:{{tSeconds}} Ticks:{{tTicks}}</h4>
+    <br>
+    <h2>Accordion Example</h2>  
+    <accordion>  
+      <accordion-group heading="Static Header, initially expanded">  
+        This content is straight in the template.  
+      </accordion-group>  
+      <accordion-group heading="Another group">  
+        <p>Some content</p>  
+      </accordion-group>  
+      <accordion-group heading="Another group">  
+        <p>Some content</p>  
+      </accordion-group>  
+    </accordion>  
+  
+    <br>  
+    <h2>Tabs Example</h2>  
+    <div>  
+        <tabset>  
+          <tab heading="Tab 1" id="tab1">Basic content for tab 1</tab>  
+          <tab heading="Tab 2">Basic content for tab 2</tab>  
+          <tab heading="Tab 3">Basic content for tab 3</tab>  
+        </tabset>  
+      </div>  
+  </div>  
+  <div class="col-md-12">  
+    <h2>Dropdown Example</h2>  
+    <div class="btn-group" dropdown>  
+      <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">  
+        Button dropdown  
+        <span class="caret"></span>  
+      </button>  
+      <ul *dropdownMenu class="dropdown-menu" role="menu">  
+        <li role="menuitem">  
+          <a class="dropdown-item" href="#">Action</a>  
+        </li>  
+        <li role="menuitem">  
+          <a class="dropdown-item" href="#">Another action</a>  
+        </li>  
+        <li role="menuitem">  
+          <a class="dropdown-item" href="#">Something else here</a>  
+        </li>  
+        <li class="divider dropdown-divider"></li>  
+        <li role="menuitem">  
+          <a class="dropdown-item" href="#">Separated link</a>  
+        </li>  
+      </ul>  
+    </div>  
+  
+    <br>  
+    <h2>Modal Popup Example</h2>  
+    <button type="button" class="btn btn-primary" (click)="staticModal.show()">Open Modal Popup</button>  
+  
+    <div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"  
+      aria-hidden="true">  
+      <div class="modal-dialog modal-sm">  
+        <div class="modal-content">  
+          <div class="modal-header">  
+            <h4 class="modal-title pull-left">Modal Popup</h4>  
+            <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">  
+              <span aria-hidden="true">×</span>  
+            </button>  
+          </div>  
+          <div class="modal-body">  
+            This is static modal popup, backdrop click will not close it. Click  
+            <b>×</b> to close modal.  
+          </div>  
+        </div>  
+      </div>  
+    </div>
+    
+    <br>
+    <h2> Tooltip & Template </h2>
+    <div>
+      <button type="button" class="btn btn-primary" 
+              tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+      Button with tooltip
+      </button>
+
+      <button type="button" class="btn btn-info" 
+              (click)="openModal(template)">Create template modal</button>
+
+      <ng-template #template>
+          <div class="modal-header">
+              <h4 class="modal-title pull-left">Modal</h4>
+              <button type="button" class="close pull-right" 
+                      aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">
+              This is a modal.
+              <br>
+              <h3>Time: {{ timeLeft }}</h3>
+              <br>
+              <button type="button" class="btn" (click)="startTimer()">Start</button>&nbsp;
+              <button type="button" class="btn" (click)="pauseTimer()">Pause</button>
+          </div>
+      </ng-template>
+    </div>
+  </div>  
+</div>

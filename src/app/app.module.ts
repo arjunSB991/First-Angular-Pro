@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { LifeGoalsComponent } from './life-goals/life-goals.component';
 import { ProImagesGalleryComponent } from './pro-images-gallery/pro-images-gallery.component';
+import { SharedBootstrapModule } from './shared/shared-bootstrap.module';
+import { BootstrapPracticesComponent } from './bootstrap-practices/bootstrap-practices.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +19,15 @@ import { ProImagesGalleryComponent } from './pro-images-gallery/pro-images-galle
     HomeComponent,
     AboutComponent,
     LifeGoalsComponent,
-    ProImagesGalleryComponent
+    ProImagesGalleryComponent,
+    BootstrapPracticesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedBootstrapModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

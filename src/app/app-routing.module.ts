@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { LifeGoalsComponent } from './life-goals/life-goals.component';
 import { ProImagesGalleryComponent } from './pro-images-gallery/pro-images-gallery.component';
+import { BootstrapPracticesComponent } from './bootstrap-practices/bootstrap-practices.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'pro_images_gallery/:name',
     component: ProImagesGalleryComponent
+  },
+  {
+    path: 'bootstrap_practices',
+    component: BootstrapPracticesComponent
   }
 ];
 

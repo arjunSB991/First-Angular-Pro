@@ -26,12 +26,17 @@
               "src/favicon.ico",
               "src/assets",
               "src/assets/OnlineShoppingSystem",
-              "src/assets/CargoManagementSystem"
+              "src/assets/CargoManagementSystem",
+              "src/assets/img",
+              "src/assets/OnlineAppointmentSystem"
             ],
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
