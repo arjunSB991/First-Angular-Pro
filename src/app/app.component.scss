@@ -11,6 +11,9 @@ ul li a {
     font-size:1.0em;
     font-weight: bold;
 }
+ul li a:hover{
+    cursor: pointer;
+}
 .modal, .modal-header, .modal-body {
     color:black;
 }
@@ -19,3 +22,4 @@ ul li a {
     padding: 2px;
     margin: 0px;
 }
+
