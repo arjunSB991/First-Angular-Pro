@@ -1,6 +1,8 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { Window } from 'selenium-webdriver';
+//import { Window } from 'selenium-webdriver';
+
+// import { FormControl, FormGroup, NgForm, FormGroupDirective } from '@angular/forms';
 
 
 @Component({
@@ -80,5 +82,19 @@ export class BootstrapPracticesComponent implements OnInit {
 
   pauseTimer(){
     clearInterval(this.interval);
+  }
+
+  industries = [
+    {id: 1, name: "Agriculture"},
+    {id: 2, name: "Manufacturing"},
+    {id: 3, name: "Energy"},
+    {id: 4, name: "Transportation"},
+    {id: 5, name: "Finance"}
+  ];
+
+  submitCompany(form){
+    console.log(form.value);
+    alert("The form was submitted");
+    form.reset();
   }
 }

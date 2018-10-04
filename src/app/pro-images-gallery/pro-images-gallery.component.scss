@@ -26,6 +26,50 @@ h4{
     margin-bottom: 0;
 }
 
-// @media only screen and (max-width:600px){
-    
-// }
+.jumbotron1 .row .col-md-12 .row {
+    padding: 0px 10px 0px 10px;
+}
+
+[class*="col-md-3"]{
+    // margin: 0px;
+    padding: 0px 5px 0px 5px;
+}
+
+@media screen and (max-width: 768px){
+    body {
+        font-size: 12px;
+        padding: 5px;
+    }
+    .container .jumbotron1 .row .col-md-12 .space{
+        display: none;
+    }
+    [class*="col-md-3"]{
+        width: 50%;
+        margin: 0px;
+        padding: 5px;
+    }
+    .col-md-12 .row {
+        padding: 0 5px 0 5px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    body {
+        font-size: 12px;
+        padding: 5px;
+    }
+    .container{
+        max-width: 100%;
+    }
+    .container .jumbotron1 .row .col-md-12 .space{
+        display: none;
+    }
+    [class*="col-md-3"]{
+        width: 100%;
+        margin: 0px;
+        padding: 5px;
+    }
+    .col-md-12 .row {
+        padding: 0 5px 0 5px;
+    }
+}

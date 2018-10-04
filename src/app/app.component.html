@@ -13,6 +13,9 @@
         <a class="nav-link" routerLink="about/48">About</a>
       </li>
       <li class="nav-item">
+          <a class="nav-link" (click)="openModal(template)">ContactUs</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" routerLink="life_goals">Life Goals</a>
       </li>
       <li class="nav-item">
@@ -22,26 +25,73 @@
   </div>  
 </nav>
 
-<!-- <app-home></app-home> -->
+<div class="col-md-12">
+    <div style="margin-top:10px;">
+        <router-outlet></router-outlet>
+    </div>
+</div>
 
-<!-- <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul> -->
-<div style="margin-top:10px;">
-<router-outlet></router-outlet>
-</div>
+<!-- <app-home></app-home> -->
+<ng-template #template style="width:50%;height:50%;">
+  <div class="modal-header">
+      <h4 class="modal-title pull-left">Contact Us</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()"> <span aria-hidden="true">&times;</span> </button>
+  </div>
+  <div class="modal-body">
+    <form #contactForm="ngForm" (ngSubmit)="sentEmail(contactForm.form);">
+      <div class="row">
+        <div class="col-md-2">Name:</div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="cont_fname" ngModel #from_name="ngModel" required placeholder="Name">
+          <div class="alert alert-danger small" *ngIf="from_name.touched && !from_name.valid">Your name is required.</div>
+        </div>
+      </div>
+      <p></p>
+      <div class="row">
+        <div class="col-md-2">Email:</div>
+        <div class="col-md-8">
+          <input type="email" class="form-control" name="cont_femail" ngModel #from_email="ngModel" required placeholder="xyz@gmail.com">
+          <div class="alert alert-danger small" *ngIf="from_email.touched && !from_email.valid">Your email is required.</div>
+        </div>
+      </div>
+      <p></p>
+      <div class="row">
+        <div class="col-md-2">Subject:</div>
+        <div class="col-md-9">
+          <input type="text" class="form-control" name="cont_fsubject" ngModel #from_subject="ngModel" required placeholder="Subject">
+          <div class="alert alert-danger small" *ngIf="from_subject.touched && !from_subject.valid">Subject is required.</div>
+        </div>
+      </div>
+      <p></p>
+      <div class="row">
+        <div class="col-md-2">Message:</div>
+        <div class="col-md-9">
+          <textarea class="form-control" name="cont_fmessage" ngModel #from_message="ngModel" required maxlength="500" placeholder="Maximum 500 words"></textarea>
+          <div class="alert alert-danger small" *ngIf="from_message.touched && !from_message.valid">Message is required.</div>
+        </div>
+      </div>
+      <p></p>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="modal-footer">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-6">
+              <button class="btn btn-primary" [disabled]="!contactForm.valid">Submit</button>
+            </div>
+          </div>
+          <!-- <p></p>
+
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-6">
+              <div class="alert alert-success" *ngIf="emailMessage=='Mail Sent'">{{emailMessage}}</div>
+              <div class="alert alert-danger" *ngIf="emailMessage=='Mail Not Sent'">{{emailMessage}}</div>
+            </div>
+          </div> -->
+          </div>
+        </div>
+    </div>
+    </form>
+  </div>
+</ng-template>

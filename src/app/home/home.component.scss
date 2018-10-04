@@ -1,17 +1,20 @@
 .project_obj {
     list-style-type:disc !important;
     margin:0 0 2em 0;
-    color: black;
-    // padding:0;
 }
-// .project_obj li {
-    // display:block;
-    // margin-right:30px;
-// }
+
 .project_title {
     font-size: 1.5em;
     font-weight: bold;
-    // text-decoration: underline; 
     padding-bottom: 0em;
     margin-bottom: -0.5em;
+}
+
+.row{
+    margin: 0.1%;
+}
+
+hr{
+    border-width: 1px;
+    border-color: skyblue;
 }

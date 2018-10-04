@@ -5,8 +5,8 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
 body {
-    background: #2E9CE6;
-    padding: 3em;
+    background: rgb(124, 124, 133);
+    padding: 5px;
     font-family: 'Raleway', 'Arial';
     color:#fff;
 }
@@ -15,78 +15,6 @@ a {
     color:#fff;
     text-decoration:none;
 }
-
-@media only screen and (min-width: 576px){
-    body {
-        font-size: 9px;
-        background-color: maroon;
-        padding: 5px;
-    }
-    // .container{
-    //     margin: 0 0 0 0;
-    //     padding: 2px;
-    //     max-width: 100%;
-    // }
-}
-
-@media only screen and (max-width: 600px){
-    body {
-        font-size: 12px;
-        background-color: maroon;
-        padding: 5px;
-    }
-    .container{
-        // margin: 0 0 0 0;
-        // padding: 2px;
-        max-width: 100%;
-    }
-    [class*="col-md-3"]{
-        width: 25%;
-        margin: 0px;
-        padding: 5px;
-    }
-    .col-md-12 .row {
-        padding: 0 5px 0 5px;
-    }
-}
-
-@media only screen and (min-width: 600px){
-    body {
-        font-size: 12px;
-        background-color: lightsalmon;
-        padding: 5px;
-    }
-    .container{
-        // margin: 0 0 0 0;
-        // padding: 2px;
-        max-width: 100%;
-    }
-    [class*="col-md-3"]{
-        width: 25%;
-        margin: 0px;
-        padding: 5px;
-    }
-    .col-md-12 .row {
-        padding: 0 5px 0 5px;
-    }
-}
-
-@media only screen and (min-width: 768px){
-    body {
-        font-size: 14px;
-        background-color: lightcoral;
-        padding: 5px;
-    }
-    // .container{
-    //     margin: 0 0 0 0;
-    //     padding: 2px;
-    //     max-width: 100%;
-    // }
-}
-
-@media only screen and (min-width: 992px){
-    body {
-        font-size: 14px;
-        background-color: lightskyblue;
-    }
+.container{
+    max-width: 100%;
 }
